@@ -17,4 +17,10 @@ public class MyLinkedListStack<T> {
     public boolean isEmpty() {
         return list.isEmpty();
     }
+    public T peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return list.getFirst();
+    }
 }
