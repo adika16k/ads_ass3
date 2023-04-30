@@ -5,6 +5,6 @@ public interface MyList<T> {
     void clear();
     T get(int index);
     void sort();
-    void removeFirst();
+    T removeFirst();
     void removeLast();
 }

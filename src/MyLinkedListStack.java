@@ -8,4 +8,13 @@ public class MyLinkedListStack<T> {
     public void push(T item){
         list.addFirst(item);
     }
+    public T pop(){
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return list.removeFirst();
+    }
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
 }

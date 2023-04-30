@@ -100,13 +100,18 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public void removeFirst() {
+    public T removeFirst() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        T data = head.data;
         if (head == tail) {
             head = tail = null;
         } else {
             head = head.next;
         }
         size--;
+        return data;
     }
 
     @Override
