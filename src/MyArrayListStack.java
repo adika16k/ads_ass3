@@ -8,4 +8,7 @@ public class MyArrayListStack<T> {
     public void push(T item){
         list.add(item);
     }
+    public boolean isEmpty() {
+        return list.getSize() == 0;
+    }
 }
