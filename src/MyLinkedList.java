@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class MyLinkedList<T> implements MyList<T> {
 
     private Node<T> head;
@@ -120,5 +122,26 @@ public class MyLinkedList<T> implements MyList<T> {
             tail.next = null;
         }
         size--;
+    }
+    public void addFirst(T item) {
+        Node<T> newNode = new Node<>(item);
+        if (isEmpty()) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        size++;
+    }
+
+    public T getFirst() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return head.data;
+    }
+
+    public boolean isEmpty() {
+        return head == null;
     }
 }
