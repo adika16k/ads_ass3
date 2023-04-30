@@ -7,5 +7,4 @@ public interface MyList<T> {
     void sort();
     void removeFirst();
     void removeLast();
-    void deleteDuplicate();
 }
