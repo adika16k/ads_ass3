@@ -3,13 +3,14 @@ public class MyArrayList<T> implements Mylist1<T> {
     private Object[] array; // Object it is when elements can take all reference types like String, Integer and etc
     private int size; // size its length of array
 
-    MyArrayList(){
+    MyArrayList() {
         this.array = new Object[10];
         this.size = 0;
     }
+
     @Override
     public void add(T element) {
-        if (size == array.length){ // it checks if array is full by comparing its size and length
+        if (size == array.length) { // it checks if array is full by comparing its size and length
             changeSize();
         }
         array[size++] = element;  // if true size increased by 1 and after that we can add an element
@@ -18,7 +19,7 @@ public class MyArrayList<T> implements Mylist1<T> {
     @Override
     public void changeSize() {
         Object[] newArray = new Object[array.length * 2]; // creating new array which length will be more twice than first array
-        for (int i=0; i< array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             newArray[i] = array[i]; // giving new array elements of first array
         }
         array = newArray;
@@ -44,10 +45,12 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public T remove(int index) {
+        T removedElement = (T) array[index];
         for (int i = index + 1; i < size; i++) { // remove given index of element
             array[i - 1] = array[i];
         }
         size--;
+        return removedElement;
     }
 
     @Override
