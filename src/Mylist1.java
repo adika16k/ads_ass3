@@ -4,7 +4,7 @@ public interface Mylist1<T> {
     void displayElements();
     T get(int index);
     void clear();
-    void remove(int index);
+    T remove(int index);
     int getSize();
     void sort();
     void removeLast();

@@ -43,7 +43,7 @@ public class MyArrayList<T> implements Mylist1<T> {
     }
 
     @Override
-    public void remove(int index) {
+    public T remove(int index) {
         for (int i = index + 1; i < size; i++) { // remove given index of element
             array[i - 1] = array[i];
         }

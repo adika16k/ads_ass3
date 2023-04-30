@@ -11,4 +11,10 @@ public class MyArrayListStack<T> {
     public boolean isEmpty() {
         return list.getSize() == 0;
     }
+    public T pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return list.remove(list.getSize() - 1);
+    }
 }
