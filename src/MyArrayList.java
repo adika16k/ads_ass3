@@ -87,10 +87,14 @@ public class MyArrayList<T> implements Mylist1<T> {
 
     @Override
     public void deleteDuplicate() {
-        for (int i=0; i< size; i++){
-            for (int j=1; j< size+1; j++)
-                if (array[i] == array[j] && j>i)
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (array[i] == array[j]) {
                     remove(j);
+                    j--;
+                }
+            }
         }
     }
 }
+
