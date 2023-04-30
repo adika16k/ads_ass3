@@ -23,4 +23,7 @@ public class MyArrayListStack<T> {
         }
         return list.get(list.getSize() - 1);
     }
+    public int size() {
+        return list.getSize();
+    }
 }
