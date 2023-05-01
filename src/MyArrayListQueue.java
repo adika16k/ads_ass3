@@ -9,7 +9,7 @@ public class MyArrayListQueue<T> {
         list.add(element); // add the element to the end of the queue.
     }
     public boolean isEmpty() {
-        return list.getSize() == 0;
+        return list.getSize() == 0; // return a boolean whether the queue is empty or not.
     }
     public T dequeue() {
         if (isEmpty()) {
