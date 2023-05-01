@@ -13,7 +13,7 @@ public class MyArrayListStack<T> {
     }
     public T pop() {
         if (isEmpty()) {
-            throw new EmptyStackException();
+            throw new EmptyStackException(); // Throws an EmptyStackException if the stack is empty
         }
         return list.remove(list.getSize() - 1);
     }
