@@ -24,6 +24,6 @@ public class MyArrayListQueue<T> {
         return list.get(0); // return the element at the front of the queue without removing it
     }
     public int size() {
-        return list.getSize();
+        return list.getSize(); // return the number of elements in the queue
     }
 }
