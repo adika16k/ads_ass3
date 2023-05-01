@@ -9,7 +9,7 @@ public class MyArrayListStack<T> {
         list.add(item); // add the item to the top of the stack
     }
     public boolean isEmpty() {
-        return list.getSize() == 0;
+        return list.getSize() == 0; // return a boolean whether the stack is empty or not
     }
     public T pop() {
         if (isEmpty()) {
