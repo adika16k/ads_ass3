@@ -6,7 +6,7 @@ public class MyArrayListQueue<T> {
         list = new MyArrayList<>();
     }
     public void enqueue(T element){
-        list.add(element);
+        list.add(element); // add the element to the end of the queue.
     }
     public boolean isEmpty() {
         return list.getSize() == 0;
