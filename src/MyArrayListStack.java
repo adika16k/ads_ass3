@@ -6,7 +6,7 @@ public class MyArrayListStack<T> {
         list = new MyArrayList<>(); // creating constructor
     }
     public void push(T item){
-        list.add(item);
+        list.add(item); // add the item to the top of the stack
     }
     public boolean isEmpty() {
         return list.getSize() == 0;
