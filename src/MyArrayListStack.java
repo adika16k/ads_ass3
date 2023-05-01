@@ -3,7 +3,7 @@ public class MyArrayListStack<T> {
     private MyArrayList<T> list;
 
     public MyArrayListStack(){
-        list = new MyArrayList<>();
+        list = new MyArrayList<>(); // creating constructor
     }
     public void push(T item){
         list.add(item);
