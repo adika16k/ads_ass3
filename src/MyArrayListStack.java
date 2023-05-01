@@ -24,6 +24,6 @@ public class MyArrayListStack<T> {
         return list.get(list.getSize() - 1); // returns the top item from the stack without removing it
     }
     public int size() {
-        return list.getSize();
+        return list.getSize(); //return the number of items in the stack
     }
 }
