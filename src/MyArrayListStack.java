@@ -19,9 +19,9 @@ public class MyArrayListStack<T> {
     }
     public T peek() {
         if (isEmpty()) {
-            throw new EmptyStackException();
+            throw new EmptyStackException(); // Throws an EmptyStackException if the stack is empty
         }
-        return list.get(list.getSize() - 1);
+        return list.get(list.getSize() - 1); // returns the top item from the stack without removing it
     }
     public int size() {
         return list.getSize();
